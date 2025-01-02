@@ -1,0 +1,30 @@
+Voting Application
+An app which allows users to vote their given set of electors/candidates
+
+Functionality
+1. user have to login using their perferred role(candidate or voter)
+2. user have to signup with their Aadhar Id's.
+3. at a time user can vote only once
+4. there are live vote counts and list of candidates sorted based on vote counts
+5. there should be one admin which can maintain the candidates and can't vote himself
+6. user can change their password
+
+
+Routes:
+User Authentication:
+    /signup: POST - Create a new account
+    /login: POST - Login your account
+
+Profile Management:
+    /profile: GET - Get your profile
+    /profile/password: PUT - Update your password
+
+Candidate Voting:
+    /candidates: GET - Show all the participated candidates
+    /vote/:voterId: POST - Vote your candidate (Role = "voter")
+    /vote/count: GET - Get vote count
+
+Admin Profile:
+    /candidates: POST - Create a new candidate
+    /candidates/:candidateId: PUT - Update a candidate
+    /candidates/:candidateId: DELETE - Delete a candidate
